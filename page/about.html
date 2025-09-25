@@ -1,11 +1,10 @@
-@ -0,0 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="fixed" href="/assets/image/moon.png">
-  <title>Alif Sya’bani - Portfolio</title>
+  <link rel="icon" type="image/png" sizes="20x20" href="/assets/image/moon.png">
+  <title>Alif's - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous">
@@ -53,7 +52,7 @@
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(10px); 
       padding: 12px 30px;
       border-radius: 50px;
       display: flex;
@@ -67,7 +66,7 @@
     nav .logo {
       font-size: 1.4rem;
       font-weight: 700;
-      color: #00c389;
+      color: #410657;
       margin-right: 20px;
     }
 
@@ -95,14 +94,14 @@
       bottom: -4px;
       width: 100%;
       height: 2px;
-      background: #00c389;
+      background: #ffffff;
       transform: scaleX(0);
       transform-origin: right;
       transition: transform 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #00c389;
+      color: #410657;
     }
 
     nav ul li a:hover::after {
@@ -160,10 +159,11 @@
     .skills li {
       font-size: 1.1rem;
       padding: 8px 15px;
-      border: 1px solid #00c389;
+      border: 1px solid #cb5ef9;
       border-radius: 20px;
-      background: rgba(0, 195, 137, 0.1);
-      text-shadow: 0 0 5px rgba(0, 195, 137, 0.8);
+      background: rgba(140, 28, 192, 0.1);
+      backdrop-filter: blur(10px);
+      /* text-shadow: 0 0 5px rgba(59, 0, 195, 0.8); */
     }
 
     .buttons {
@@ -178,16 +178,16 @@
       padding: 12px 25px;
       border-radius: 30px;
       font-weight: bold;
-      border: 2px solid #00c389;
-      color: #00c389;
+      border: 2px solid #ffffff;
+      color: #ffffff;
       transition: 0.3s;
       background: transparent;
     }
 
     .buttons a:hover {
-      background: #00c389;
-      color: #000;
-      box-shadow: 0 0 20px #00c389;
+      background: #ffffff;
+      color: #410657;
+      box-shadow: 0 0 15px #410657;
     }
 
     /* SOCIAL ICONS */
@@ -277,17 +277,55 @@
         flex-direction: column;
       }
     }
+    /* Warna default */
+    .social-icons .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(255,255,255,0);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    }
 
+    /* Hover umum */
+    .social-icons .icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
 
-    /* Glow effects */
-    .social-icons a.whatsapp:hover { box-shadow: 0 0 15px #000; color: #000; background: #fff; }
-    .social-icons a.tiktok:hover { box-shadow: 0 0 15px #000; color: #000; background: #fff; }
-    .social-icons a.instagram:hover { box-shadow: 0 0 15px #000; color: #000; background: #fff; }
-    .social-icons a.facebook:hover { box-shadow: 0 0 15px #000; color: #000; background: #fff; }
-    .social-icons a.github:hover { box-shadow: 0 0 15px #000; color: #000; background: #fff; } 
-    .social-icons a.x:hover { box-shadow: 0 0 15px #000; color: #000; background: #fff; }
+    /* Brand-specific hover */
+    .social-icons .icon.whatsapp:hover {
+    background: #25D366;
+    color: #fff;
+    }
+    .social-icons .icon.tiktok:hover {
+    background: #010101;
+    color: #fff;
+    }
+    .social-icons .icon.instagram:hover {
+    background: #E1306C;
+    color: #fff;
+    }
+    .social-icons .icon.facebook:hover {
+    background: #1877F2;
+    color: #fff;
+    }
+    .social-icons .icon.github:hover {
+    background: #333;
+    color: #fff;
+    }
+    .social-icons .icon.twitter:hover {
+    background: #1DA1F2;
+    color: #fff;
+    }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
@@ -297,10 +335,10 @@
         gap: 10px;
       }
       .right p {
-      line-height: 1.6;
-      font-size: 0.95rem;
-      color: #ddd;
-      }
+        line-height: 1.6;
+        font-size: 0.95rem;
+        color: #ddd;
+      }  
     }
   </style>
   <!-- FontAwesome for icons -->
@@ -308,13 +346,12 @@
 </head>
 <body>
   <video autoplay muted loop class="video-bg">
-    <source src="/assets/image/tambahan/blackhole.mp4" type="video/mp4">
+    <source src="/assets/video/blackhole.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <!-- NAVBAR -->
   <nav>
-    <div class="logo">Alif</div>
     <ul>
       <li><a href="/page/about.html">About</a></li>
       <li><a href="/page/experience.html">Experience</a></li>
@@ -338,15 +375,16 @@
       <a href="#achivements">Achievements</a>
       <a href="#achivements">About me </a>
     </div>
+    
 
     <!-- SOCIAL ICONS -->
     <div class="social-icons">
-      <a href="https://wa.me/0883112088830" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.tiktok.com/" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
-      <a href="https://instagram.com/syah.baani" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
-      <a href="https://twitter.com" target="_blank" class="x"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/0883112088830" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/" target="_blank" class="icon tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/syah.baani" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://github.com" target="_blank" class="icon github"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com" target="_blank" class="icon twitter"><i class="fab fa-x-twitter"></i></a>
     </div>
   </section>
   <!-- MAIN WRAPPER -->
