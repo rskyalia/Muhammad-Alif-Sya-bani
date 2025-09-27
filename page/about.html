@@ -61,6 +61,7 @@
       gap: 25px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
       z-index: 1000;
+      border-color: white;
     }
 
     nav .logo {
@@ -340,13 +341,80 @@
         color: #ddd;
       }  
     }
+        /* PUBLIC SPEAKING SECTION */
+    #publicspeaking {
+    text-align: left;
+    margin-top: auto;
+    padding-top: auto;
+    }
+    #publicspeaking h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    .speaking-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    }
+
+    .speaking-photo img {
+    width: 280px;      /* ukuran potrait */
+    height: 400px;
+    position: relative;
+    align-items: left;
+    object-fit: cover;
+    border-radius: 12px;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+    }
+
+    .speaking-photo img:hover {
+    filter: grayscale(0%);
+    }
+
+    .speaking-desc {
+    max-width: 500px;
+    color: #dcdcdc;
+    }
+
+    .speaking-desc h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-top: auto;
+    }
+
+    .speaking-desc p {
+    font-size: 1rem;
+    line-height: 1.6;
+    }
+
+    .speaking-desc a {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+
+    .speaking-desc a:hover {
+    color: #410657;
+    }
+
   </style>
   <!-- FontAwesome for icons -->
   <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <audio autoplay="" src=""></audio>
   <video autoplay muted loop class="video-bg">
-    <source src="/assets/video/blackhole.mp4" type="video/mp4">
+    <source src="/assets/video/purplecat.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -355,7 +423,7 @@
     <ul>
       <li><a href="/page/about.html">About</a></li>
       <li><a href="/page/experience.html">Experience</a></li>
-      <li><a href="/page/project.html">Project</a></li>
+      <li><a href="/page/project.html">Portofolio</a></li>
       <li><a href="/page/contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -373,7 +441,7 @@
     </ul>
     <div class="buttons">
       <a href="#achivements">Achievements</a>
-      <a href="#achivements">About me </a>
+      <a href="#publicspeaking">About me </a>
     </div>
     
 
@@ -439,6 +507,24 @@
     </div>
   </div>
 </section>
+  <section id="publicspeaking">
+    <h2 align="center">About Me</h2>
+    <div class="speaking-container">
+      <div class="speaking-photo">
+        <img src="/assets/image/alif.JPG" alt="Public Speaking">
+      </div>
+      <div class="speaking-desc">
+        <h3>Alif's Biograph </h3>
+        <p>
+          I have expertise in software development and public speaking, with strong foundations in web technologies, programming languages, and presentation skills. I aim to further enhance my collaboration and leadership abilities while expanding into the field of data science, focusing on data analysis, machine learning, and practical applications of AI. Supported by advanced English communication skills, I am well-prepared to thrive and compete in international professional environments.
+          <br><br>
+          <a href="https://your-link-website.com" target="_blank">
+            Learn more about my Public Speaking experience →
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 
 
 

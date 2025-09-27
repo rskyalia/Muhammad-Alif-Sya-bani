@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="20x20" href="/assets/image/moon.png">
+  <title>Alif's - Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: #fff;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    /* Background Video */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      backdrop-filter: blur(10px); 
+      padding: 12px 30px;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 10px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: #ffffff;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #410657;
+    }
+
+    nav ul li a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Profile Section */
+    .profile {
+      margin-top: 120px;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Title */
+    h1 {
+      margin-top: 20px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #f4f4f4;
+      text-shadow: 0 0 15px rgba(255,255,255,0.7);
+    }
+
+    /* Masonry Gallery */
+    .projects {
+      column-count: 3;
+      column-gap: 15px;
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 10px;
+    }
+
+    .project {
+      position: relative;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      cursor: pointer;
+    }
+
+    .project img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Overlay Effect */
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(65, 6, 87, 0.65);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .project:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .overlay p {
+      font-size: 0.9rem;
+      max-width: 80%;
+      line-height: 1.4;
+    }
+
+    /* Thanks */
+    .thanks {
+      margin: 50px 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #a24ddc;
+      text-shadow: 0 0 12px rgba(162, 77, 220, 0.9);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .projects { column-count: 2; }
+    }
+    @media (max-width: 480px) {
+      .projects { column-count: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop class="video-bg">
+    <source src="/assets/video/purplecat.mp4" type="video/mp4">
+  </video>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="/page/about.html">About</a></li>
+      <li><a href="/page/experience.html">Experience</a></li>
+      <li><a href="/page/project.html">Portfolio</a></li>
+      <li><a href="/page/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Profile -->
+  <div class="profile">
+    <img src="/assets/image/moon.png" alt="Alif Profile">
+  </div>
+  <h1>Coming soon</h1>
+
+    </div>
+  </div>
+</body>
+</html>
